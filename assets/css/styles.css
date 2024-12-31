@@ -41,27 +41,25 @@ body.dark-mode {
     transition: background-color var(--transition-speed);
 }
 
-.nav-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.dark-mode .nav-container {
+    background-color: var(--card-dark);
 }
 
-/* Main Container */
-.main-container {
-    max-width: 1280px;
-    margin: 5rem auto 2rem;
-    padding: 0 1rem;
+/* Content Cards */
+.content-card {
+    background-color: var(--card-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed);
 }
 
-/* Search */
-.search-container {
-    margin-bottom: 2rem;
+.dark-mode .content-card {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
 }
 
+/* Search Box */
 .search-box {
     background-color: var(--card-light);
     border-radius: 0.5rem;
@@ -70,62 +68,35 @@ body.dark-mode {
     align-items: center;
     gap: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-speed);
 }
 
-/* Chart */
+.dark-mode .search-box {
+    background-color: var(--card-dark);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Chart Card */
 .chart-card {
     background-color: var(--card-light);
     border-radius: 0.5rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.chart-container {
-    height: 400px;
-    margin-top: 1rem;
-}
-
-/* Content Grid */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.content-card {
-    background-color: var(--card-light);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition-speed);
-}
-
-.content-card:hover {
-    transform: translateY(-2px);
-}
-
-/* Interactive Elements */
-.interactive-element {
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 2px dashed var(--primary-color);
-    border-radius: 0.5rem;
-    cursor: pointer;
     transition: background-color var(--transition-speed);
 }
 
-.interactive-element:hover {
-    background-color: rgba(59, 130, 246, 0.1);
+.dark-mode .chart-card {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .lg-hidden {
-        display: block;
-    }
-}
+/* Rest of your existing styles... */
