@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>GTM Strategy Template</title>
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+    
+    <!-- External Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Local Assets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h1>GTM Strategy</h1>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+                    <i data-feather="moon"></i>
+                </button>
+                <button id="menu-toggle" class="icon-button lg-hidden" aria-label="Toggle menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <i data-feather="search"></i>
+                <input type="text" id="search-bar" placeholder="Search strategy...">
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <!-- Financial Chart -->
+        <div class="chart-card">
+            <h2>Revenue Projections</h2>
+            <div class="chart-container">
+                <canvas id="financialChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Executive Summary -->
+            <div class="content-card">
+                <h2>Executive Summary</h2>
+                <p>[Insert concise summary of the strategy and objectives here]</p>
+            </div>
+
+            <!-- Market Analysis -->
+            <div class="content-card">
+                <h2>Market Analysis</h2>
+                <p>[Insert data about market trends, TAM, SAM, and ICPs]</p>
+                <div class="interactive-element">
+                    <h3>Quick Insights</h3>
+                    <p>Hover here to explore key takeaways for market trends!</p>
+                </div>
+            </div>
+
+            <!-- Additional Sections -->
+            <div class="content-card">
+                <h2>Target Audience</h2>
+                <p>[Describe Personas and ICPs with details about demographics, needs, and behaviors]</p>
+            </div>
+
+            <div class="content-card">
+                <h2>Value Proposition</h2>
+                <p>[Summarize unique selling points and why the product/service matters to the target audience]</p>
+                <div class="interactive-element">
+                    <h3>Interactive FAQ</h3>
+                    <p>Click here to reveal answers to common audience-related questions!</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2>Brand Messaging</h2>
+                <p>[Include tagline, core messaging pillars, and brand voice guidelines]</p>
+            </div>
+
+            <div class="content-card">
+                <h2>Go-To-Market Strategy</h2>
+                <p>[Detail launch plans, channels, and key campaigns]</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

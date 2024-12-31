@@ -1,0 +1,131 @@
+:root {
+    /* Define your brand colors here */
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --background-light: #f9fafb;
+    --background-dark: #111827;
+    --text-light: #1f2937;
+    --text-dark: #f3f4f6;
+    --card-light: #ffffff;
+    --card-dark: #1f2937;
+    --transition-speed: 0.3s;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Navigation */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--card-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color var(--transition-speed);
+}
+
+.nav-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1280px;
+    margin: 5rem auto 2rem;
+    padding: 0 1rem;
+}
+
+/* Search */
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    background-color: var(--card-light);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart */
+.chart-card {
+    background-color: var(--card-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    height: 400px;
+    margin-top: 1rem;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.content-card {
+    background-color: var(--card-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed);
+}
+
+.content-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Interactive Elements */
+.interactive-element {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px dashed var(--primary-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.interactive-element:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lg-hidden {
+        display: block;
+    }
+}
